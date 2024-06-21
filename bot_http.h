@@ -8,21 +8,21 @@ namespace bot
 	class Bot
 	{
 	private:
-		std::string url = "https://api.telegram.org/bot6954596706:AAG_c9M3locrA91Zgbh-rEXquru6AjwnR2w/";
+		std::string url = "https://api.telegram.org/";
 		std::vector <std::pair<int, std::vector<int>>> read_messages;
 
-		// Метод проверяет, является ли сообщение прочитанным
+		// ГЊГҐГІГ®Г¤ ГЇГ°Г®ГўГҐГ°ГїГҐГІ, ГїГўГ«ГїГҐГІГ±Гї Г«ГЁ Г±Г®Г®ГЎГ№ГҐГ­ГЁГҐ ГЇГ°Г®Г·ГЁГІГ Г­Г­Г»Г¬
 		bool IsRead(int chat_id, int message_id);
-		// Метод получает из текста ФИО человека
+		// ГЊГҐГІГ®Г¤ ГЇГ®Г«ГіГ·Г ГҐГІ ГЁГ§ ГІГҐГЄГ±ГІГ  Г”Г€ГЋ Г·ГҐГ«Г®ГўГҐГЄГ 
 		std::optional<std::vector<std::string>> GetNameFromText(std::string& text);
 	public:
 		//Bot();
 		//~Bot();
 
-		// Метод возвращает последнее полученное сообщение
+		// ГЊГҐГІГ®Г¤ ГўГ®Г§ГўГ°Г Г№Г ГҐГІ ГЇГ®Г±Г«ГҐГ¤Г­ГҐГҐ ГЇГ®Г«ГіГ·ГҐГ­Г­Г®ГҐ Г±Г®Г®ГЎГ№ГҐГ­ГЁГҐ
 		std::optional<tg::Update> GetLastMessage();
 
-		// Метод запускает обработку сообщений
+		// ГЊГҐГІГ®Г¤ Г§Г ГЇГіГ±ГЄГ ГҐГІ Г®ГЎГ°Г ГЎГ®ГІГЄГі Г±Г®Г®ГЎГ№ГҐГ­ГЁГ©
 		void Run();
 	};
 }
